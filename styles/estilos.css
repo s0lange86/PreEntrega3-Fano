@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;500&family=Roboto+Mono:wght@100;400;700&display=swap');
+
+
+/* RESETEO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Roboto Mono', monospace;
+
+    height: 100vh;
+    background-color: #D1E6D6;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+/* LOGIN INDEX*/
+.main-index {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover{
+    transition: 0.35s;
+    transform: scale(1.2);
+}
+
+/* PRINCIPAL */
+
+.jugadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.juega-pc,
+.juega-usuario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.nombre-carta {
+    width: 150px;
+    height: 150px;
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: rotate-center 0.8s ease-in-out both;
+    animation: rotate-center 0.8s ease-in-out both;
+}
+
+.puntaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texto-resultado {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.titulo-resultado {
+    margin-bottom: 1em;
+}
+
+.titulo-tabla {
+    margin-bottom: 0.5em;
+    width: 150px;
+    color: #fafafa;
+}
+
+.resultado {
+    margin: 0.5em;
+}
+
+/* FONDOS CUANDO SE SELECCIONA UNA CARTA */
+.cartaElegida {
+    box-shadow: 2px 4px 4px 2px #858282;
+    transform: scale(1.1);
+}
+
+/* KEYFRAMES */
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
