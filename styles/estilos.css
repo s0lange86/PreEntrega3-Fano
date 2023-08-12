@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;500&family=Roboto+Mono:wght@100;400;700&display=swap');
 
 
-/* RESETEO */
+/* RESETEO  Y ESTILOS GENERALES*/
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +27,8 @@ body {
     padding: 0.5em;
 }
 
-/* LOGIN INDEX*/
-.main-index {
+/* HTML: LOGIN INDEX*/
+.main-index{
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -41,14 +41,43 @@ body {
 .btn a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.btn:hover{
-    transition: 0.35s;
-    transform: scale(1.2);
+#logo-sitio {
+    margin-right: 3em;
 }
 
-/* PRINCIPAL */
+#logo-sitio img{
+    width: 100%;
+}
+
+@media(max-width:650px){
+    #logo-sitio{
+        margin-right: 0;
+    }
+
+    #logo-sitio img{
+        width: 75%;
+        margin-bottom: 2.5em;
+    }
+
+    .main-index{
+        flex-direction: column;
+    }
+}
+
+
+/* HTML: PRINCIPAL */
+.navbar {
+    padding: 0;
+}
+
+.navbar a{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 
 .jugadas {
     display: flex;
@@ -73,10 +102,16 @@ body {
     margin: 1em;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     -webkit-animation: rotate-center 0.8s ease-in-out both;
     animation: rotate-center 0.8s ease-in-out both;
+}
+
+.carta-usuario:hover {
+    cursor: pointer;
+    background-color: #fffab5;
 }
 
 .puntaje {
@@ -88,6 +123,7 @@ body {
 #texto-resultado {
     font-weight: bold;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .titulo-resultado {
@@ -104,11 +140,31 @@ body {
     margin: 0.5em;
 }
 
-/* FONDOS CUANDO SE SELECCIONA UNA CARTA */
+/* FONDO CUANDO SE SELECCIONA UNA CARTA */
 .cartaElegida {
     box-shadow: 2px 4px 4px 2px #858282;
     transform: scale(1.1);
 }
+
+
+/* HTML: LISTA */
+.main-lista{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-usuarios{
+    display: flex;
+    justify-content: center;
+}
+
+#titulo-jugadores{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
 
 /* KEYFRAMES */
 @-webkit-keyframes rotate-center {
